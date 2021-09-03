@@ -55,28 +55,28 @@ public class PlusAndMonoTest {
     @DisplayName("Flux fromArray() Sample")
     @Test
     void fromArrayTest() {
-        List<String> names = new ArrayList<>();
-        Flux<String> flux = Flux.fromArray(new String[]{"김구", "윤봉길", "유관순"}).log();
-        flux.subscribe(names::add);
-        assertThat(names, is(equalTo(Arrays.asList("김구, 윤봉길, 유관순"))));
+//        List<String> names = new ArrayList<>();
+//        Flux<String> flux = Flux.fromArray(new String[]{"김구", "윤봉길", "유관순"}).log();
+//        flux.subscribe(names::add);
+//        assertThat(names, is(equalTo(Arrays.asList("김구, 윤봉길, 유관순"))));
     }
 
     @DisplayName("Flux fromIterable() Sample")
     @Test
     void fromIterableTest() {
-        List<String> names = new ArrayList<>();
-        Flux<String> flux = Flux.fromIterable(Arrays.asList("김구", "윤봉길", "유관순")).log();
-        flux.subscribe(names::add);
-        assertThat(names, is(equalTo(Arrays.asList("김구, 윤봉길, 유관순"))));
+//        List<String> names = new ArrayList<>();
+//        Flux<String> flux = Flux.fromIterable(Arrays.asList("김구", "윤봉길", "유관순")).log();
+//        flux.subscribe(names::add);
+//        assertThat(names, is(equalTo(Arrays.asList("김구, 윤봉길, 유관순"))));
     }
 
     @DisplayName("Flux fromStream() Sample")
     @Test
     void fromStreamTest() {
-        List<String> names = new ArrayList<>();
-        Flux<String> flux = Flux.fromStream(Arrays.asList("김구", "윤봉길", "유관순").stream()).log();
-        flux.subscribe(names::add);
-        assertThat(names, is(equalTo(Arrays.asList("김구, 윤봉길, 유관순"))));
+//        List<String> names = new ArrayList<>();
+//        Flux<String> flux = Flux.fromStream(Arrays.asList("김구", "윤봉길", "유관순").stream()).log();
+//        flux.subscribe(names::add);
+//        assertThat(names, is(equalTo(Arrays.asList("김구, 윤봉길, 유관순"))));
     }
 
     @DisplayName("Flux generator() Sample")

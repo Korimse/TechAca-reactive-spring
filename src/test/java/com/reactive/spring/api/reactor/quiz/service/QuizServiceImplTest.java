@@ -1,6 +1,8 @@
 package com.reactive.spring.api.reactor.quiz.service;
 
 import com.reactive.spring.api.reactor.quiz.domain.Quiz;
+import com.reactive.spring.api.reactor.quiz.repository.AttemptRepository;
+import com.reactive.spring.api.reactor.quiz.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,9 +21,14 @@ class QuizServiceImplTest {
     private QuizServiceImpl quizService;
     @Mock
     GeneratorServiceImpl generatorService;
+    @Mock
+    UserRepository userRepository;
+    @Mock
+    AttemptRepository attemptRepository;
+
     @BeforeEach
     void setUp() {
-        quizService = new QuizServiceImpl(generatorService);
+        quizService = new QuizServiceImpl(generatorService, userRepository, attemptRepository);
     }
 
     @DisplayName("50 * 30 = 1500")
